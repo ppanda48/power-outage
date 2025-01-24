@@ -1,0 +1,91 @@
+:root {
+    --green: #27AE60;
+    --red: #C44031;
+    --light-black: #212121;
+    --xlight-black: #424242;
+    --hover-blur-black: #2F2F2F;
+}
+
+* {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+p {
+    display: inline-block;
+}
+
+body {
+    background-color: var(--light-black);
+}
+
+.timeLeft {
+    display: block;
+    margin: 75px;
+    padding-inline: 15px;
+}
+
+.timeSpacing {
+    font-size: 50px;
+    color: white;
+}
+
+#timeLeftHour, #timeLeftMinute ,#timeLeftSecond {
+    font-size: 50px;
+    background-color: white;
+    padding-inline: 10px;
+    padding-block: 5px;
+    padding-bottom: 12px;
+    border-radius: 7px;
+}
+
+#powerStatusText {
+    display: inline-block;
+    background-color: var(--red);
+    color: white;
+    padding-inline: 25px;
+    padding-block: 10px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.groupDiv button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: var(--hover-blur-black);  
+}
+
+.groupDiv button, .groupDiv ul li a {
+    color: white;
+}
+
+.groupDiv button:focus, .groupDiv button:hover {
+    color: white;
+    background-color: var(--hover-blur-black);
+    border: 1.5px solid #3A3A3A;
+    opacity: 0.85;
+}
+
+.groupDiv ul {
+    background-color: var(--hover-blur-black);
+    border: 1.5px solid #3A3A3A;
+}
+
+.groupDiv ul li a:hover {
+    color: white;
+    background-color: var(--xlight-black);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* 
+.groupDiv button {
+    width: 80px;
+    height: 45px;
+    margin-top: 50px;
+    margin-inline: 12px;
+    border-radius: 7px;
+} */

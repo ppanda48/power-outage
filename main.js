@@ -193,3 +193,5 @@ function changeGroup(group) {
     document.getElementById("groupText").innerText = `Group ${selectedGroup}`;
     checkTodayPowerOnHours(timeDate,timeMonth);
 }
+
+// Version 1.0

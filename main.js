@@ -1,11 +1,15 @@
+var version = "1.1";
+
 let timeText = document.getElementById('time');
 let timeLeftHourText = document.getElementById('timeLeftHour');
 let timeLeftMinuteText = document.getElementById('timeLeftMinute');
 let timeLeftSecondText = document.getElementById('timeLeftSecond');
 let powerStatusText = document.getElementById('powerStatusText');
 
-let timeLeftText = document.querySelectorAll('#timeLeftHour, #timeLeftMinute, #timeLeftSecond')
+let timeLeftText = document.querySelectorAll('#timeLeftHour, #timeLeftMinute, #timeLeftSecond');
 let timeSpacings = document.querySelectorAll('.timeSpacing');
+
+let versionLabel = document.getElementById("versionLabel");
 
 // Color Codes
 
@@ -165,13 +169,22 @@ let poweronhours = [
     {timeon:[13,25],date:[20,23,26,29],month:"0",group:"C"},
     {timeon:[9,21],date:[21,24,27,30],month:"0",group:"C"},
     {timeon:[5,17,25],date:[22,25,28,31],month:"0",group:"C"}
+
+    {timeon:[5,17,25],date:[1,4,7,10,13,16,19,22,25,28],month:"1",group:"A"},
+    {timeon:[13,25],date:[2,5,8,11,14,17,20,23,26],month:"1",group:"A"},
+    {timeon:[9,21],date:[3,6,9,12,15,18,21,24,27],month:"1",group:"A"},
+
+    {timeon:[9,21],date:[1,4,7,10,13,16,19,22,25,28],month:"1",group:"B"},
+    {timeon:[5,17,25],date:[2,5,8,11,14,17,20,23,26],month:"1",group:"B"},
+    {timeon:[13,25],date:[3,6,9,12,15,18,21,24,27],month:"1",group:"B"},
+
+    {timeon:[13,25],date:[1,4,7,10,13,16,19,22,25,28],month:"1",group:"C"},
+    {timeon:[9,21],date:[2,5,8,11,14,17,20,23,26],month:"1",group:"C"},
+    {timeon:[5,17,25],date:[3,6,9,12,15,18,21,24,27],month:"1",group:"C"}
 ];
 
 var todayPowerOnHours;
 var selectedGroup = "A";
-
-// todayPowerOnHours = poweronhours[0].timeon;
-// console.log(todayPowerOnHours);
 
 function checkTodayPowerOnHours(currentDate,currentMonth) {
     for(let i = 0; i < poweronhours.length; i++) {
@@ -194,4 +207,6 @@ function changeGroup(group) {
     checkTodayPowerOnHours(timeDate,timeMonth);
 }
 
-// Version 1.0
+// Version
+
+versionLabel.innerText = version;

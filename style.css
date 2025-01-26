@@ -81,13 +81,8 @@ body {
     cursor: pointer;
 }
 
-/* 
-.groupDiv button {
-    width: 80px;
-    height: 45px;
-    margin-top: 50px;
-    margin-inline: 12px;
-    border-radius: 7px;
-} */
-
-/* Version 1.0 */
+.versionDiv {
+    position: fixed;
+    left: 5px;
+    bottom: -15px;
+}

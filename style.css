@@ -1,9 +1,12 @@
 :root {
+    --black: #000;
+    --white: #fff;
     --green: #27AE60;
     --red: #C44031;
     --light-black: #212121;
     --xlight-black: #424242;
     --hover-blur-black: #2F2F2F;
+    --orange: #FFA837;
 }
 
 * {
@@ -17,10 +20,6 @@ p {
     display: inline-block;
 }
 
-body {
-    background-color: var(--light-black);
-}
-
 .timeLeft {
     display: block;
     margin: 75px;
@@ -29,12 +28,13 @@ body {
 
 .timeSpacing {
     font-size: 50px;
-    color: white;
+    color: var(--black);
 }
 
-#timeLeftHour, #timeLeftMinute ,#timeLeftSecond {
+#timeLeftHour, #timeLeftMinute, #timeLeftSecond {
     font-size: 50px;
-    background-color: white;
+    background-color: var(--black);
+    color: var(--white);
     padding-inline: 10px;
     padding-block: 5px;
     padding-bottom: 12px;
@@ -43,8 +43,8 @@ body {
 
 #powerStatusText {
     display: inline-block;
-    background-color: var(--red);
-    color: white;
+    background-color: var(--orange);
+    color: var(--white);
     padding-inline: 25px;
     padding-block: 10px;
     border-radius: 5px;
@@ -59,11 +59,11 @@ body {
 }
 
 .groupDiv button, .groupDiv ul li a {
-    color: white;
+    color: var(--white);
 }
 
 .groupDiv button:focus, .groupDiv button:hover {
-    color: white;
+    color: var(--white);
     background-color: var(--hover-blur-black);
     border: 1.5px solid #3A3A3A;
     opacity: 0.85;
@@ -75,7 +75,7 @@ body {
 }
 
 .groupDiv ul li a:hover {
-    color: white;
+    color: var(--white);
     background-color: var(--xlight-black);
     border-radius: 3px;
     cursor: pointer;

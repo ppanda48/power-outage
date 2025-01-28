@@ -1,4 +1,5 @@
-var version = "1.1";
+var version = "1.1.1";
+var delaySeconds = 0;
 
 let timeText = document.getElementById('time');
 let timeLeftHourText = document.getElementById('timeLeftHour');
@@ -31,31 +32,29 @@ var timeDate;
 var timeMonth;
 
 function checkTime(){
-    setTimeout(()=>{
-        timeHour = new Date().getHours();
-        timeMinute = new Date().getMinutes();
-        timeSecond = new Date().getSeconds();
-        timeDate = new Date().getDate();
-        timeMonth = new Date().getMonth();
+    timeHour = new Date().getHours();
+    timeMinute = new Date().getMinutes();
+    timeSecond = new Date().getSeconds();
+    timeDate = new Date().getDate();
+    timeMonth = new Date().getMonth();
 
-        if(timeMinute < 10) {
-            timeMinute = `0${timeMinute}`;
-        } 
+    if(timeMinute < 10) {
+        timeMinute = `0${timeMinute}`;
+    } 
 
-        if(timeMinute < 10) {
-            timeMinute = `0${timeMinute}`;
-        }   
+    if(timeMinute < 10) {
+        timeMinute = `0${timeMinute}`;
+    }   
 
-        if(timeSecond < 10) {
-            timeSecond = `0${timeSecond}`;
-        }
+    if(timeSecond < 10) {
+        timeSecond = `0${timeSecond}`;
+    }
 
-        checkTimeLeft(+timeHour,+timeMinute,+timeSecond);
-        checkTime();
-    },100)
+    checkTimeLeft(+timeHour,+timeMinute,+timeSecond);
+    setTimeout(()=>{checkTime()},100);
 }
 
-checkTime();
+setTimeout(()=>{checkTime()},delaySeconds)
 
 // ------------------------------------------------------------------------------------------------------------------------
 
@@ -107,8 +106,6 @@ function checkTimeLeft(currentHour,currentMinute,currentSecond) {
         timeLeftText[0].innerText = timeHourLeft;
         timeLeftText[1].innerText = timeMinuteLeft;
         timeLeftText[2].innerText = timeSecondLeft;
-
-        // checkTimeLeft(+timeHour,+timeMinute,+timeSecond);
     },100)
 }
 
@@ -197,7 +194,7 @@ function checkTodayPowerOnHours(currentDate,currentMonth) {
     }
 }
 
-setTimeout(()=>{checkTodayPowerOnHours(timeDate,timeMonth)},100)
+setTimeout(()=>{checkTodayPowerOnHours(timeDate,timeMonth)},delaySeconds)
 
 // Change Group
 
